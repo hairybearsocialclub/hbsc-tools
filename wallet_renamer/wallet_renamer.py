@@ -12,13 +12,13 @@ from hbsc_utils.rpc import ChiaWalletWrapper
 logging.basicConfig(level=logging.INFO)
 
 
-def load_cat_data():
-    with open("known_cats.json", "r") as f:
+def load_cat_data(f_name: str):
+    with open(f_name, "r") as f:
         return json.load(f)
 
 
 async def main(args):
-    cats = load_cat_data()
+    cats = load_cat_data(args.input_file)
 
     async with ChiaWalletWrapper(hostname=args.hostname, port=args.port) as (_, client):
         renames: List[Tuple[int, str]] = []
@@ -57,7 +57,7 @@ parser.add_argument(
     "-i",
     "--input-file",
     type=str,
-    default="cats.json",
+    default="known_cats.json",
     help=r"JSON file containing CAT data with format [{tail: {name: 'NAME', ticker: 'TKR'}}, ...]",
 )
 parser.add_argument(
