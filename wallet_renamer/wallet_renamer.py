@@ -4,6 +4,7 @@ import argparse
 import asyncio
 import json
 import logging
+import os
 import re
 import sys
 
@@ -26,7 +27,11 @@ async def main(args):
 
         wallet_fingerprint = await client.get_logged_in_fingerprint()
         logging.info(f"Connected to wallet with fingerprint {wallet_fingerprint}")
-        wallets = [w for w in await client.get_wallets() if w["id"] != 1 and w["name"].upper() != "POOL WALLET"]
+        wallets = [
+            w
+            for w in await client.get_wallets()
+            if w["id"] != 1 and w["name"].upper() != "POOL WALLET"
+        ]
 
         for w in wallets:
             if re.search(r"CAT\s[a-z0-9]+", w["name"]) or args.force:
@@ -44,7 +49,9 @@ async def main(args):
             sys.exit()
 
         print(f"Will rename {len(renames)} CATs.")
-        if (answer := input(r"Proceed? (y\n) > ").strip().lower()) == "y" or answer == "yes":
+        if (
+            answer := input(r"Proceed? (y\n) > ").strip().lower()
+        ) == "y" or answer == "yes":
             for wallet_id, name in renames:
                 await client.set_cat_name(wallet_id, name)
             print("Renaming complete. Log in and out of your wallet to see changes.")
@@ -61,9 +68,20 @@ parser.add_argument(
     help=r"JSON file containing CAT data with format [{tail: {name: 'NAME', ticker: 'TKR'}}, ...]",
 )
 parser.add_argument(
-    "--hostname", type=str, default="127.0.0.1", help="Wallet RPC hostname"
+    "--hostname",
+    type=str,
+    default=os.getenv("CHIA_WALLET_HOSTNAME", "127.0.0.1"),
+    help="Wallet RPC hostname",
 )
-parser.add_argument("-p", "--port", type=int, default=9256, help="Wallet RPC port")
-parser.add_argument("-f", "--force", action="store_true", help="Force rename known CATs")
+parser.add_argument(
+    "-p",
+    "--port",
+    type=int,
+    default=int(os.getenv("CHIA_WALLET_PORT", "9256")),
+    help="Wallet RPC port",
+)
+parser.add_argument(
+    "-f", "--force", action="store_true", help="Force rename known CATs"
+)
 args = parser.parse_args()
 asyncio.run(main(args))
