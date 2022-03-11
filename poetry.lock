@@ -344,7 +344,7 @@ six = "*"
 
 [[package]]
 name = "hbsc-utils"
-version = "0.1.0"
+version = "0.2.0"
 description = "HBSC Python utils"
 category = "main"
 optional = false
@@ -650,7 +650,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "c003b4ed40e43ead4f5bf0251afbea295d01f7478e7eb47d18bad3e5101a1c1d"
+content-hash = "f7f3e96363e1e08b6e9fc90bae13f1056986f767c902f6e90718a41db22a5274"
 
 [metadata.files]
 aiofiles = [
@@ -955,8 +955,8 @@ fasteners = [
     {file = "fasteners-0.16.3.tar.gz", hash = "sha256:b1ab4e5adfbc28681ce44b3024421c4f567e705cc3963c732bf1cba3348307de"},
 ]
 hbsc-utils = [
-    {file = "hbsc_utils-0.1.0-py3-none-any.whl", hash = "sha256:5f45aa8e5e8b61868ed6b8d5994a7c1e860c109bd88e2f3c085f078671ab6e53"},
-    {file = "hbsc_utils-0.1.0.tar.gz", hash = "sha256:ac57c67f239fbb79ec031c8bc79ca2c18aac5e3fd16163719d033a86a2c71ad4"},
+    {file = "hbsc_utils-0.2.0-py3-none-any.whl", hash = "sha256:28f705ddda7841d91ecc63072c40b33af80071ed63ac71a56f3b415c1017c28a"},
+    {file = "hbsc_utils-0.2.0.tar.gz", hash = "sha256:c34c063dbb1710de3f614bd670104313c5832cd77ab70d99ac7cdd2c3de74b3a"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
