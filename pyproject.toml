@@ -6,7 +6,7 @@ authors = ["Hairy Bear Social Club <hairybearsocialclub@protonmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-hbsc-utils = "^0.2.0"
+hbsc-utils = "^0.2.1"
 
 [tool.poetry.dev-dependencies]
 

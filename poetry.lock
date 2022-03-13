@@ -344,7 +344,7 @@ six = "*"
 
 [[package]]
 name = "hbsc-utils"
-version = "0.2.0"
+version = "0.2.1"
 description = "HBSC Python utils"
 category = "main"
 optional = false
@@ -364,7 +364,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "importlib-metadata"
-version = "4.11.2"
+version = "4.11.3"
 description = "Read metadata from Python packages"
 category = "main"
 optional = false
@@ -650,7 +650,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f7f3e96363e1e08b6e9fc90bae13f1056986f767c902f6e90718a41db22a5274"
+content-hash = "6df05c65b0730a1548027a06eba06b4184d6d772bc637151a1356158903c1a53"
 
 [metadata.files]
 aiofiles = [
@@ -955,16 +955,16 @@ fasteners = [
     {file = "fasteners-0.16.3.tar.gz", hash = "sha256:b1ab4e5adfbc28681ce44b3024421c4f567e705cc3963c732bf1cba3348307de"},
 ]
 hbsc-utils = [
-    {file = "hbsc_utils-0.2.0-py3-none-any.whl", hash = "sha256:28f705ddda7841d91ecc63072c40b33af80071ed63ac71a56f3b415c1017c28a"},
-    {file = "hbsc_utils-0.2.0.tar.gz", hash = "sha256:c34c063dbb1710de3f614bd670104313c5832cd77ab70d99ac7cdd2c3de74b3a"},
+    {file = "hbsc_utils-0.2.1-py3-none-any.whl", hash = "sha256:1d2004c582c2405805086e4687b0f8aea8ceab71127bd3d4eebba3f5d42e9691"},
+    {file = "hbsc_utils-0.2.1.tar.gz", hash = "sha256:e88f58fdefd7c6f1172be6378bcd87643861e4243723ff28d6408f3c429837d6"},
 ]
 idna = [
     {file = "idna-3.3-py3-none-any.whl", hash = "sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff"},
     {file = "idna-3.3.tar.gz", hash = "sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"},
 ]
 importlib-metadata = [
-    {file = "importlib_metadata-4.11.2-py3-none-any.whl", hash = "sha256:d16e8c1deb60de41b8e8ed21c1a7b947b0bc62fab7e1d470bcdf331cea2e6735"},
-    {file = "importlib_metadata-4.11.2.tar.gz", hash = "sha256:b36ffa925fe3139b2f6ff11d6925ffd4fa7bc47870165e3ac260ac7b4f91e6ac"},
+    {file = "importlib_metadata-4.11.3-py3-none-any.whl", hash = "sha256:1208431ca90a8cca1a6b8af391bb53c1a2db74e5d1cef6ddced95d4b2062edc6"},
+    {file = "importlib_metadata-4.11.3.tar.gz", hash = "sha256:ea4c597ebf37142f827b8f39299579e31685c31d3a438b59f469406afd0f2539"},
 ]
 jeepney = [
     {file = "jeepney-0.7.1-py3-none-any.whl", hash = "sha256:1b5a0ea5c0e7b166b2f5895b91a08c14de8915afda4407fb5022a195224958ac"},
